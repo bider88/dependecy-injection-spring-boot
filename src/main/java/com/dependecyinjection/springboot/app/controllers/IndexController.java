@@ -13,7 +13,7 @@ public class IndexController {
 	@Autowired
 	private MyService myService;
 	
-	@GetMapping({"/", "index", ""})
+	@GetMapping({"/", "/index", ""})
 	public String index(Model model) {
 		model.addAttribute("object", myService.operator());
 		return "index";
