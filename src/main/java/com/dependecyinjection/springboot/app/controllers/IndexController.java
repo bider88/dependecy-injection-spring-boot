@@ -13,9 +13,20 @@ public class IndexController {
 	@Autowired
 	private MyService myService;
 	
+//	@Autowired
+//	public IndexController(MyService myService) {
+//		this.myService = myService;
+//	}
+	
 	@GetMapping({"/", "/index", ""})
 	public String index(Model model) {
 		model.addAttribute("object", myService.operator());
 		return "index";
 	}
+	
+//	@Autowired
+//	public void setMyService(MyService myService) {
+//		this.myService = myService;
+//	}	
+	
 }
