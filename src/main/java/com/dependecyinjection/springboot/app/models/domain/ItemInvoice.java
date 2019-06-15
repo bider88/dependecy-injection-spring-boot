@@ -15,6 +15,11 @@ public class ItemInvoice {
 	}
 	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
+	}
+	
+	public ItemInvoice(Product product, Integer quantity) {
+		this.product = product;
+		this.quantity = quantity;
 	}	
 	
 }
