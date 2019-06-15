@@ -20,6 +20,10 @@ public class ItemInvoice {
 	public ItemInvoice(Product product, Integer quantity) {
 		this.product = product;
 		this.quantity = quantity;
-	}	
+	}
+	
+	public Integer getAmount() {
+		return product.getPrice() * quantity;
+	}
 	
 }

@@ -3,6 +3,7 @@ package com.dependecyinjection.springboot.app.models.domain;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +15,7 @@ public class Invoice {
 	@Autowired
 	private Client client;
 	@Autowired
+	@Qualifier("itemInvoiceGamer")
 	private List<ItemInvoice> items;
 	
 	public String getDescription() {
