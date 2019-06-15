@@ -2,7 +2,7 @@ package com.dependecyinjection.springboot.app.models.service;
 
 import org.springframework.stereotype.Component;
 
-@Component("SimpleService")
+//@Component("SimpleService")
 public class MyServiceImpl implements MyService {
 
 	@Override

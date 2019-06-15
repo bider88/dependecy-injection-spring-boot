@@ -1,6 +1,7 @@
 package com.dependecyinjection.springboot.app.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,12 +12,8 @@ import com.dependecyinjection.springboot.app.models.service.MyService;
 public class IndexController {
 	
 	@Autowired
+//	@Qualifier("SimpleService")
 	private MyService myService;
-	
-//	@Autowired
-//	public IndexController(MyService myService) {
-//		this.myService = myService;
-//	}
 	
 	@GetMapping({"/", "/index", ""})
 	public String index(Model model) {
@@ -27,6 +24,16 @@ public class IndexController {
 //	@Autowired
 //	public void setMyService(MyService myService) {
 //		this.myService = myService;
-//	}	
+//	}
+	
+	/*
+	 * De Igual manera, cuando hacemos la inyección de dependencia por constructor, esta se puede obviar quitando la anotación @Autowired
+	 * ya que el constructor la inyecta por automático
+	 */
+	
+//	@Autowired
+//	public IndexController(MyService myService) {
+//		this.myService = myService;
+//	}
 	
 }

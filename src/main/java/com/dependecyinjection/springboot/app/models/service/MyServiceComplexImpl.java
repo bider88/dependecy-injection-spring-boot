@@ -3,9 +3,9 @@ package com.dependecyinjection.springboot.app.models.service;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component("SimpleServiceComplex")
+//@Component("ComplexService")
 //Indicamos cual es la implementación principal o por defecto
-@Primary
+//@Primary
 public class MyServiceComplexImpl implements MyService {
 
 	@Override
