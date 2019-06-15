@@ -2,6 +2,9 @@ package com.dependecyinjection.springboot.app.models.domain;
 
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -37,4 +40,16 @@ public class Invoice {
 		this.items = items;
 	}
 	
+	@PostConstruct
+	public void init() {
+		System.out.println("Client name: ".concat(client.getName()));
+		client.setName(client.getName().concat(" ").concat("Beatriz"));
+		System.out.println("Description: ".concat(description));
+		description = description.concat(" of the client: ").concat(client.getName());
+	}
+	
+	@PreDestroy
+	public void destroy() {
+		System.out.println("Invoice destroyed: ".concat(description));
+	}
 }
