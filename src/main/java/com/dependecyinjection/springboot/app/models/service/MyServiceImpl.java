@@ -7,7 +7,7 @@ public class MyServiceImpl implements MyService {
 
 	@Override
 	public String operator() {
-		return "Executing something process with Dependecy Injection...";
+		return "Executing something simple process with Dependecy Injection...";
 	}
 	
 }
